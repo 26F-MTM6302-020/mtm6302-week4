@@ -60,3 +60,16 @@ findColor("lightgreen")
 for (let i = 0; i < 5; i++) {
     console.log($allColors[i])
 }
+
+console.log($allColors.length)
+
+for (let i = 0; i < $allColors.length; i++) {
+    console.log($allColors[i])
+}
+
+const $coloredBoxes = document.getElementById("colored-boxes")
+// loop over the $allColors array and a div for each item with background-color
+
+for (const $color of $allColors) {
+    $coloredBoxes.innerHTML += `<div class="box" style="background-color:${$color}"></div>`
+}
